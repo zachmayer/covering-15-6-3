@@ -1,0 +1,15 @@
+[project]
+name = "uniform-covering-proof"
+version = "0.0.0"
+requires-python = ">=3.14"
+dependencies = ["python-sat==1.9.dev17", "networkx==3.7"]
+
+[tool.ruff.lint]
+# This research bundle pins correctness and import checks; style expansion is separate.
+select = ["E9", "F", "I"]
+
+[tool.ruff]
+extend-exclude = [".cache", ".work", ".uv-cache", ".venv"]
+
+[tool.ty.src]
+exclude = [".cache", ".work", ".uv-cache"]

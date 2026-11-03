@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eu
+cd -- "$(dirname -- "$0")"
+nice -n 19 uv sync --frozen --cache-dir .uv-cache >&2
+exec nice -n 19 .venv/bin/python controls.py

@@ -1,0 +1,61 @@
+version = 1
+revision = 5
+requires-python = ">=3.14"
+
+[[package]]
+name = "networkx"
+version = "3.7"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/dc/76/3af777226b63a5e64a6b36b1ec5855c14e2b94a37096d4760e595fc43511/networkx-3.7.tar.gz", hash = "sha256:fd77a511bd90f39f3d016351345b52cf5319b813bdca01de3f755d3cca62e96a", size = 1866482, upload-time = "2026-09-21T16:45:16.974Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/7e/cd/fe58041e9011f307c490e3e17dd48cc516448f7c698a3f2d9d9d65d7e6a8/networkx-3.7-py3-none-any.whl", hash = "sha256:e3fd2c13a7814cee3746340d8d7f8598a67f16a58bf47fb7f8793fab6efca1b0", size = 2142205, upload-time = "2026-09-21T16:45:14.609Z" },
+]
+
+[[package]]
+name = "python-sat"
+version = "1.9.dev17"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "six" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/d8/90/dfe512facf5def6efd483c05506495860d5fffb33573f09b419fd1f8d5b8/python_sat-1.9.dev17.tar.gz", hash = "sha256:826e9ef8a8086f5139c05eb89aaa05ebfa72f8a622cd7be429d10a2b1cbb1955", size = 6113790, upload-time = "2026-10-20T02:48:10.372Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/a3/25/afed1a7259546a7ad3b3afa779dca9f7257c6d39bb710d2f416c87243dc8/python_sat-1.9.dev17-cp314-cp314-macosx_10_15_x86_64.whl", hash = "sha256:00fc1fb6c2d808b49b683f8ae7a9e09368d5795ff600013c9fa61dc590b42453", size = 2626179, upload-time = "2026-10-20T02:47:40.266Z" },
+    { url = "https://files.pythonhosted.org/packages/89/d6/f8b62dd5efb0ea7ffdbe9179906ccf0e68534f87a87906a34f65e5ac3357/python_sat-1.9.dev17-cp314-cp314-macosx_11_0_arm64.whl", hash = "sha256:b220d55d4b5e95993c80b6b9332bcc87127e7dc901abb674145a39540c1c7ead", size = 2410387, upload-time = "2026-10-20T02:47:41.716Z" },
+    { url = "https://files.pythonhosted.org/packages/68/6e/78993003357a1fe7f98f2f9103ba03b261b079e0690a172de9565bfb55b3/python_sat-1.9.dev17-cp314-cp314-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:f49fcdeed7ecd9636c600f22c66ff9d2f2becc07e88ec06ac26811cb682096b0", size = 3917608, upload-time = "2026-10-20T02:47:43.092Z" },
+    { url = "https://files.pythonhosted.org/packages/39/c2/176e42e97151508e487ab29ef54cf7537b601af4ae17d45b1980c8f61d05/python_sat-1.9.dev17-cp314-cp314-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:31010c7c32172e5ea8fb894ebedccf794627acd443972b52e935f22259b8a1e8", size = 4063894, upload-time = "2026-10-20T02:47:44.559Z" },
+    { url = "https://files.pythonhosted.org/packages/0b/72/f1b7427faf08f807eb76d385cc1ca82beacd030bfae06a49014524f9ee0e/python_sat-1.9.dev17-cp314-cp314-musllinux_1_2_aarch64.whl", hash = "sha256:e6d37249b493e72364006ac18b3875a24234e2dae3a91ddc1e9589d547e29dd9", size = 4899294, upload-time = "2026-10-20T02:47:46.061Z" },
+    { url = "https://files.pythonhosted.org/packages/4e/85/5ba959c8f10168766e09860cfcecdbc68532f7fb58c212b15f31941acd98/python_sat-1.9.dev17-cp314-cp314-musllinux_1_2_x86_64.whl", hash = "sha256:f373174bd31b6723876b478ad5adc621ebee36fdcba52c9ad6b13c248c8403fd", size = 5071549, upload-time = "2026-10-20T02:47:48.111Z" },
+    { url = "https://files.pythonhosted.org/packages/2b/03/65a5835e094ba6eb5cae5a514c18949974ed50528a8233b2966fa260fd08/python_sat-1.9.dev17-cp314-cp314-pyemscripten_2026_0_wasm32.whl", hash = "sha256:8ecf5e9de74844365ff2bef39f2f30791a54895fe6fba5dfd92f1c327673477b", size = 1170913, upload-time = "2026-10-20T02:47:49.84Z" },
+    { url = "https://files.pythonhosted.org/packages/0a/29/07099b2a80688905fbd2ff584163d25822f61da5570f3f4c955f54eff6ff/python_sat-1.9.dev17-cp314-cp314-win_amd64.whl", hash = "sha256:201b90e0625abf4009d4f987e3cd3d197b2a8ebf5f534939991b707a154d8d27", size = 1969930, upload-time = "2026-10-20T02:57:02.356Z" },
+    { url = "https://files.pythonhosted.org/packages/88/61/ffa7b881e074cd41b5f8f70eb216b0cdb96b8db349b87921c2cd0c6fc9b8/python_sat-1.9.dev17-cp314-cp314t-macosx_10_15_x86_64.whl", hash = "sha256:d88798f7f8154629197f0455bf63223aafa8553b218cb29e7272683bdbdb3fde", size = 2630687, upload-time = "2026-10-20T02:47:51.397Z" },
+    { url = "https://files.pythonhosted.org/packages/d3/d1/a3d6eab578f6f24c38bad9f3720b0cac428863f58f6e3aa3717fbf06fd7f/python_sat-1.9.dev17-cp314-cp314t-macosx_11_0_arm64.whl", hash = "sha256:9406232b248303096434b13ead34b43723dc8faa974e742d2dca5136d0a5e99e", size = 2415398, upload-time = "2026-10-20T02:47:52.865Z" },
+    { url = "https://files.pythonhosted.org/packages/43/f5/d295593537fa489c10cf61c7142277a3218a542c903e2e8ab97d94e439fa/python_sat-1.9.dev17-cp314-cp314t-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:a70d878108faa32ac06e6656ab46cb21c501ac94c6c6c5ae057420eca2f6545a", size = 3994008, upload-time = "2026-10-20T02:47:54.616Z" },
+    { url = "https://files.pythonhosted.org/packages/c8/8e/fc6ed91b207c3c11bd52a38a58081610e8e08a4a750f0723805f4d0cfd2b/python_sat-1.9.dev17-cp314-cp314t-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:ba218b2765cb53d3756c02fab88e91f5b6d61aa3a83434d29153df1664e1777f", size = 4132213, upload-time = "2026-10-20T02:47:56.092Z" },
+    { url = "https://files.pythonhosted.org/packages/fd/10/3f28893271830bcf82f6816750d9249d4db55374ea88e7a1b88687dc0fe4/python_sat-1.9.dev17-cp314-cp314t-musllinux_1_2_aarch64.whl", hash = "sha256:8f7464c1924f56a4dcfb08f9dd5ec11d1c8ba73586b6e46d7f20b5fa742c0702", size = 4965560, upload-time = "2026-10-20T02:47:58.067Z" },
+    { url = "https://files.pythonhosted.org/packages/32/4f/543284e543d4495b39c6ef261b8100844b998561c2c7e68abf5267b20d98/python_sat-1.9.dev17-cp314-cp314t-musllinux_1_2_x86_64.whl", hash = "sha256:15019bfdea4f77e1a15ce78e7a341b22457d24cb7fb047ecd421940daa158721", size = 5132746, upload-time = "2026-10-20T02:47:59.557Z" },
+]
+
+[[package]]
+name = "six"
+version = "1.17.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/94/e7/b2c673351809dca68a0e064b6af791aa332cf192da575fd474ed7d6f16a2/six-1.17.0.tar.gz", hash = "sha256:ff70335d468e7eb6ec65b95b99d3a2836546063f63acc5171de367e834932a81", size = 34031, upload-time = "2024-12-04T17:35:28.174Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b7/ce/149a00dd41f10bc29e5921b496af8b574d8413afcd5e30dfa0ed46c2cc5e/six-1.17.0-py2.py3-none-any.whl", hash = "sha256:4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274", size = 11050, upload-time = "2024-12-04T17:35:26.475Z" },
+]
+
+[[package]]
+name = "uniform-covering-proof"
+version = "0.0.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "networkx" },
+    { name = "python-sat" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "networkx", specifier = "==3.7" },
+    { name = "python-sat", specifier = "==1.9.dev17" },
+]

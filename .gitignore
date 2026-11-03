@@ -1,0 +1,8 @@
+proof/.venv/
+proof/.work/
+proof/.uv-cache/
+proof/.cache/
+proof/check_lrat
+proof/results.jsonl
+proof/rerun.jsonl
+__pycache__/

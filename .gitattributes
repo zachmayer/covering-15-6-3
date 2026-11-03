@@ -1,0 +1,2 @@
+# Preserve the LF bytes used by catalogue, order and source hashes.
+* text=auto eol=lf
