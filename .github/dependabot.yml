@@ -1,0 +1,30 @@
+# Weekly version updates for the SHA-pinned actions, grouped into one PR.
+# Cooldown: a release waits 7 days before a version update proposes it, time
+# for a compromised release to be caught and yanked. Security updates skip it.
+# The merge-dependabot job in .github/workflows/ci.yml squash-merges each PR once its checks pass.
+# https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+
+version: 2
+updates:
+  # Version updates off: proof/uniform.py hashes pyproject.toml and uv.lock
+  # into every record of results.jsonl.gz, so any lock change makes
+  # ./summarize print NOT PROVEN until the proof is re-run (about an hour).
+  # Security updates still open; CI's audit fails on them, so they wait for Zach.
+  - package-ecosystem: "uv"
+    directory: "/proof"
+    schedule:
+      interval: "weekly"
+    cooldown:
+      default-days: 7
+    open-pull-requests-limit: 0
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    cooldown:
+      default-days: 7
+    groups:
+      all-actions:
+        patterns:
+          - "*"
