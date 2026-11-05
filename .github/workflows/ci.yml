@@ -1,0 +1,62 @@
+name: ci
+
+# One check job: zizmor finds no workflow security flaws, the 31-group
+# covering still checks, and the recorded run still audits as PROVEN against
+# this code and lockfile. Dependabot's PRs merge once it passes.
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      # https://docs.zizmor.sh
+      # Audits every workflow in the repo and dependabot.yml for security
+      # flaws. The action pins zizmor itself, so new rules arrive only with a
+      # Dependabot bump, which merges only once they pass.
+      - uses: zizmorcore/zizmor-action@53290badfa369cb0bf7ad16342cb62c2fa47ac7b # v0.8.0
+        with:
+          min-severity: medium
+          advanced-security: false
+          annotations: true
+      - uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2 # v10.3.3
+      - name: 31 is enough
+        run: python3 check_cover.py
+      # The README's audit of the recorded run. It fails on any change to
+      # pyproject.toml or uv.lock, which are hashed into every record. Not
+      # run here: ./controls and ./prove_all, which need cadical.
+      - name: 30 is not (recorded run)
+        working-directory: proof
+        run: |
+          gunzip -k results.jsonl.gz
+          uv sync --locked
+          ./summarize results.jsonl
+
+  # Dependabot's PRs merge themselves. This job checks nothing out, so the PR's
+  # code never runs with this write token, and --match-head-commit refuses a
+  # head that moved after this run saw it.
+  merge-dependabot:
+    needs: [check]
+    # Only someone with write access can push to Dependabot's branch, and they
+    # can push to main anyway. Accepted: reopening a closed Dependabot PR, which
+    # Triage allows, gets it merged once the checks pass.
+    if: github.event_name == 'pull_request' && github.event.pull_request.user.login == 'dependabot[bot]'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - run: gh pr merge --squash --match-head-commit "$PR_HEAD_SHA" "$PR_URL"
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          GH_TOKEN: ${{ github.token }}
