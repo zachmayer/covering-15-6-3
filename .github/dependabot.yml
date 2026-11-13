@@ -1,4 +1,4 @@
-# Weekly version updates for the SHA-pinned actions, grouped into one PR.
+# Weekly version updates for the actions locked in actions.lock, grouped into one PR.
 # Cooldown: a release waits 7 days before a version update proposes it, time
 # for a compromised release to be caught and yanked. Security updates skip it.
 # The merge-dependabot job in .github/workflows/ci.yml squash-merges each PR once its checks pass.
